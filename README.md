@@ -13,16 +13,18 @@ bound logger works too).
 
 ## Install
 
-The core (security headers, error handlers, request logging, pagination) needs
-only `fastapi`. The rest are opt-in extras:
+The package isn't on PyPI; install it from this repository. The core
+(security headers, error handlers, request logging, pagination) needs only
+`fastapi`. The rest are opt-in extras:
 
 ```sh
-pip install fastapi-starlette-essentials            # core
-pip install "fastapi-starlette-essentials[jwt]"     # + JWT
-pip install "fastapi-starlette-essentials[redis]"   # + async Redis cache
-pip install "fastapi-starlette-essentials[ratelimit]"  # + slowapi helpers
-pip install "fastapi-starlette-essentials[metrics]"    # + Prometheus
-pip install "fastapi-starlette-essentials[all]"        # everything
+REPO=git+https://github.com/hewcarroll/fastapi-starlette-essentials
+pip install "$REPO"                                          # core
+pip install "fastapi-starlette-essentials[jwt] @ $REPO"      # + JWT
+pip install "fastapi-starlette-essentials[redis] @ $REPO"    # + async Redis cache
+pip install "fastapi-starlette-essentials[ratelimit] @ $REPO"  # + slowapi helpers
+pip install "fastapi-starlette-essentials[metrics] @ $REPO"    # + Prometheus
+pip install "fastapi-starlette-essentials[all] @ $REPO"        # everything
 ```
 
 ## Quick start

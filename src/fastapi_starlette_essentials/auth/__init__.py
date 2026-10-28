@@ -1,4 +1,4 @@
-"""JWT helpers (requires the ``jwt`` extra: ``pip install fastapi-starlette-essentials[jwt]``)."""
+"""JWT helpers (requires the ``jwt`` extra; see the README for install)."""
 
 from .jwt import JWTConfig, JWTManager
 
